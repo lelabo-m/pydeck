@@ -18,7 +18,9 @@ class Pile(object):
         self.__members.insert(0, obj)
 
     def get(self, index=0):
-        if index >= len(self.__members):
-            index = len(self.__members) - 1
-        if index
+        size = len(self.__members)
+        if index >= size:
+            index = size - 1
+        if index < -size:
+            index = -size
         return self.__members[index]
