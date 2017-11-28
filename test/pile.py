@@ -45,3 +45,14 @@ def test_fill_and_clean2():
     new_pile.clean()
     assert new_pile.empty()
     assert new_pile.size == 0
+
+
+def test_shuffle():
+    new_pile = Pile()
+    for x in range(100):
+        new_pile.put_below(x)
+    assert new_pile.size == 100
+    assert not new_pile.empty()
+    new_pile.shuffle()
+    assert new_pile.size == 100
+    assert not new_pile.empty()
