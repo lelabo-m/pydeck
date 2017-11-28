@@ -24,6 +24,8 @@ class Pile(object):
         return self.__members.pop(0)
 
     def see(self, index=0):
+        if not self.__members:
+            return None
         size = len(self.__members)
         if index >= size:
             index = size - 1
