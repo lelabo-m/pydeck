@@ -15,7 +15,7 @@ class Pile(object):
         return len(self.members)
 
     def shuffle(self):
-        self.__members = random.shuffle(self.__members)
+        random.shuffle(self.__members)
 
     def put(self, obj):
         self.__members.insert(0, obj)
