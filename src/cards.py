@@ -8,7 +8,7 @@ class Card(object):
         self.value = value
 
     def __repr__(self):
-        print "{}{}".format(self.value, self.family)
+        return "{}{}".format(self.value, self.family)
 
 
 class CardDeck(Deck):
