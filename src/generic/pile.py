@@ -10,6 +10,10 @@ class Pile(object):
     def members(self):
         return self.__members
 
+    @property
+    def size(self):
+        return len(self.members)
+
     def shuffle(self):
         self.__members = random.shuffle(self.__members)
 

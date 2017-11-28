@@ -8,9 +8,22 @@ class Deck(object):
         self.stock_stack = Pile()
         self.discard_stack = Pile()
         self.build()
+        self.__size = self.stock_stack.size
 
     def build(self):
         pass
+
+    @property
+    def size(self):
+        return self.__size
+
+    @property
+    def remaining(self):
+        return self.stock_stack.size
+
+    @property
+    def discarded(self):
+        return self.discard_stack.size
 
     def __deal(self):
         if self.stock_stack.empty():
