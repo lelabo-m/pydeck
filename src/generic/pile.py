@@ -21,6 +21,8 @@ class Pile(object):
         self.__members.insert(0, obj)
 
     def get(self):
+        if not self.__members:
+            return None
         return self.__members.pop(0)
 
     def see(self, index=0):
