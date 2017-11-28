@@ -25,6 +25,9 @@ class Deck(object):
     def discarded(self):
         return self.discard_stack.size
 
+    def empty(self):
+        return self.stock_stack.empty()
+
     def __deal(self):
         if self.stock_stack.empty():
             if self.discard_stack.empty():
