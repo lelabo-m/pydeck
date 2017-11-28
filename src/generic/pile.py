@@ -20,6 +20,9 @@ class Pile(object):
     def put(self, obj):
         self.__members.insert(0, obj)
 
+    def put_below(self, obj):
+        self.__members.append(obj)
+
     def get(self):
         if not self.__members:
             return None
