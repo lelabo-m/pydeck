@@ -40,11 +40,13 @@ class Deck(object):
             return self.__deal()
         else:
             objects = []
-            for x in range(numbers + 1):
+            for x in range(numbers):
                 obj = self.__deal()
                 if not obj:
                     break
                 objects.append(obj)
+            if not objects:
+                return None
             return objects
 
     def discard(self, objects):
